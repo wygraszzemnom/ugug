@@ -1,0 +1,13 @@
+list = []
+zmienna = input("wpisz>")
+list.append(zmienna)
+print(list)
+dousuniencia = int(input("wpisz>"))
+list.pop(dousuniencia)
+print(list)
+
+rozwiązanie
+
+np "kciuk"
+0
+[]
