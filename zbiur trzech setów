@@ -1,0 +1,13 @@
+# Zbiór 1 - Zbiór liczb całkowitych
+zbior1 = {1, 2, 3, 4, 5}
+
+# Zbiór 2 - Zbiór łańcuchów znaków
+zbior2 = {"jabłko", "banan", "gruszka", "pomarańcza"}
+
+# Zbiór 3 - Zbiór mieszany zawierający różne typy danych
+zbior3 = {1, "kot", 3.14, (1, 2, 3)}
+
+# Wyświetlenie zawartości zbiorów
+print("Zbiór 1:", zbior1)
+print("Zbiór 2:", zbior2)
+print("Zbiór 3:", zbior3)
