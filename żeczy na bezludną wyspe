@@ -1,0 +1,51 @@
+import random
+
+# Przykładowa lista dostępnych rzeczy
+dostepne_rzeczy = [
+    "noż", "zapałki", "latarka", "pierścień ratunkowy", "mapa",
+    "telewizor", "krzesło", "biurko", "konsola do gier", "lampa",
+    "przewód do komputera", "doniczka", "kuchenka mikrofalowa", "suszarka do włosów", "zegar ścienny"
+]
+
+# Funkcja do losowego wyboru 5 ważnych i 10 niepotrzebnych rzeczy
+def wybierz_rzeczy():
+    wybrane_ważne = random.sample(dostepne_rzeczy, 5)
+    wybrane_niepotrzebne = random.sample(dostepne_rzeczy, 10)
+    return wybrane_ważne, wybrane_niepotrzebne
+
+# Osoba 1 wybiera rzeczy
+print("Osoba 1, wybierz rzeczy, które chciałbyś/chciałabyś zabrać na bezludną wyspę:")
+ważne_osoba1, niepotrzebne_osoba1 = wybierz_rzeczy()
+
+# Osoba 2 wybiera rzeczy
+print("Osoba 2, wybierz rzeczy, które chciałbyś/chciałabyś zabrać na bezludną wyspę:")
+ważne_osoba2, niepotrzebne_osoba2 = wybierz_rzeczy()
+
+# Wspólne rzeczy między osobą 1 i osobą 2
+wspolne_wazne = set(ważne_osoba1).intersection(ważne_osoba2)
+wspolne_niepotrzebne = set(niepotrzebne_osoba1).intersection(niepotrzebne_osoba2)
+
+# Wypisanie wybranych rzeczy
+print("\nOsoba 1 chciałaby zabrać na bezludną wyspę:")
+print("Ważne rzeczy:")
+for rzecz in ważne_osoba1:
+    print("- " + rzecz)
+print("Niepotrzebne rzeczy:")
+for rzecz in niepotrzebne_osoba1:
+    print("- " + rzecz)
+
+print("\nOsoba 2 chciałaby zabrać na bezludną wyspę:")
+print("Ważne rzeczy:")
+for rzecz in ważne_osoba2:
+    print("- " + rzecz)
+print("Niepotrzebne rzeczy:")
+for rzecz in niepotrzebne_osoba2:
+    print("- " + rzecz)
+
+print("\nWspólne ważne rzeczy między obiema osobami:")
+for rzecz in wspolne_wazne:
+    print("- " + rzecz)
+
+print("Wspólne niepotrzebne rzeczy między obiema osobami:")
+for rzecz in wspolne_niepotrzebne:
+    print("- " + rzecz)
