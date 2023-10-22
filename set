@@ -1,0 +1,17 @@
+our_products = {"apple", "tesla", "mcdonald's",}
+range_of_the_company_1 = {"samsung", "sony",}
+range_of_the_company_2 = {"apple", "ibm", "tesla",}
+range_of_the_company_3 = {"bmw", "tesla", "ferrari",}
+
+print(our_products.difference(range_of_the_company_1))
+print(our_products.difference(range_of_the_company_2))
+print(our_products.difference(range_of_the_company_3))
+
+our_products = {"apple", "tesla", "mcdonald's",}
+range_of_the_company_1 = {"samsung", "sony",}
+range_of_the_company_2 = {"apple", "ibm", "tesla",}
+range_of_the_company_3 = {"bmw", "tesla", "ferrari",}
+
+print(our_products.difference(range_of_the_company_1))
+print(our_products.difference(range_of_the_company_2))
+print(our_products.difference(range_of_the_company_3))
