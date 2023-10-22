@@ -1,0 +1,13 @@
+# Zbiór 1 - Zbiór liczb całkowitych
+OSOBA1 = {"SZYMON","KARTKE+DUGOPIS,TELEFON,ZESTAW MAŁEGO WŁAMYWACZA"}
+
+# Zbiór 2 - Zbiór łańcuchów znaków
+OSOBA2 = {"JAREK","POWERBAMK,TELEFON,JAJKO"}
+
+# Zbiór 3 - Zbiór mieszany zawierający różne typy danych
+OSOBA3 = {"OLIWIA", "ROZPAŁKA,ZAPALNICZKA,KRZESIWO"}
+
+# Wyświetlenie zawartości zbiorów
+print("OSOBA 1:", OSOBA1)
+print("OSOBA 2:", OSOBA2)
+print("OSOBA 3:", OSOBA3)
