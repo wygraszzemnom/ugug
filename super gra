@@ -1,0 +1,84 @@
+import random
+
+class Zolnierz():
+  def __init__(self, moce, zdrowie=100, sila=5, wytrzymalosc=50, poziom=1, imie="Shrek"):
+    self.zdrowie = zdrowie 
+    self.sila = sila
+    self.wytrzymalosc = wytrzymalosc
+    self.poziom = poziom
+    self.imie = imie
+    self.moce = moce
+
+  def wybierzAtak(self, czyWrog):
+    if not czyWrog:
+      for i in range(len(self.moce)):
+        print(f"{i}. Moc: {self.moce[i].nazwa}")
+      moc = int(input("Wybierz moc: "))
+      return self.moce[moc]
+    else:
+      return random.choice(self.moce)
+
+  def atak(self, wrog, czyWrog):
+    moc = self.wybierzAtak(czyWrog)
+    obrazenia = random.randint(1,5) * self.sila * moc.obrazenia
+    wrog.zdrowie -= obrazenia
+    print(f"{self.imie} atakuje {wrog.imie} z mocą {moc.nazwa} za {obrazenia}")
+    print(f"{wrog.imie} ma {wrog.zdrowie} HP")
+
+class Moc():
+  def __init__(self, nazwa, obrazenia, typ, koszt):
+    self.nazwa = nazwa
+    self.obrazenia = obrazenia
+    self.typ = typ
+    self.koszt = koszt
+
+class Gra():
+  def __init__(self, bohater, wrogowie):
+    self.bohater = bohater
+    self.wrogowie = wrogowie
+
+  def menu(self):
+    print("-------------MENU----------------")
+    print("1. Zawalcz na arenie")
+    print("---------------------------------")
+    print("2. Idź do skepu")
+    print("---------------------------------")
+    print("3. Poddaj sie wojowniku")
+    print("---------------------------------")
+    wybor = int(input(">>> "))
+    if wybor == 1:
+      przeciwnik = self.wybierzPrzeciwnika()
+      self.walka(przeciwnik)
+    elif wybor == 2:
+      pass
+    elif wybor == 3:
+      pass
+    else:
+      pass
+
+  def wybierzPrzeciwnika(self):
+    for i in range(len(self.wrogowie)):
+      print(f"{i}. Gladiator: ", self.wrogowie[i].imie)
+    wybor = int(input("Wybierz przeciwnika: "))
+    return self.wrogowie[wybor]
+
+  def walka(self, przeciwnik):
+    print("WALKA SIE ZACZELA")
+    print("---------------------------------")
+    while self.bohater.zdrowie > 0 and przeciwnik.zdrowie > 0:
+      self.bohater.atak(przeciwnik, False)
+      przeciwnik.atak(self.bohater, True)
+    if self.bohater.zdrowie <= 0:
+      print(f"Niestety, {self.bohater.imie} poległ i przegrałeś")
+      exit()
+    elif przeciwnik.zdrowie <= 0:
+      print(f"{self.bohater.imie} pokonał {przeciwnik.imie} i zostało mu {self.bohater.zdrowie} punktów hp. Brawo!")
+
+bohater = Zolnierz([Moc("Czar", 20, "Magia", 20), Moc("Walnięcie laską", 15, "Fizyczne", 25)],250, 5, 75, 1, "Gandalf")
+Dundersztyc = Zolnierz([Moc("Atakoinator", 10, "Nauka", 5), Moc("Rolady Dwie", 20, "Magia", 20)], 120, 5, 40, 3, imie="Dr. Heinz Dundersztyc" )
+Bambaryła = Zolnierz([Moc("Tłuszcz Balistyczny", 25, "Kaloryczne", 5), Moc("Kebab na grubym", 10, "Magia", 20)], 350, 15, 60, 3, imie="Bambaryła" )
+
+gra = Gra(bohater, [Dundersztyc, Bambaryła])
+
+while True:
+  gra.menu()
