@@ -1,0 +1,72 @@
+import random
+
+class Zolnierz:
+  def __init__(self, moce, zdrowie=100, sila=10, wytrzymalosc = 50, poziom=1, imie='jacek placek'):
+    self.zdrowie = zdrowie
+    self.zdrowie = zdrowie
+    self.sila = sila
+    self.wytrzymalosc = wytrzymalosc
+    self.poziom = poziom
+    self.imie = imie
+    self.moce = moce
+
+  def wybierzatak(self, czywrog):
+    if not czywrog:
+      for i in range(len(self.moce)):
+          print(f"{i}. moc: {self.moce[i]}")
+      moc = int(input("wybierz moc: "))
+      return self.moce[moc]
+    else:
+      return random.choice(self.moce)
+
+  def atak(self, wrog, czywrog):
+    moc = self.wybierzatak(czywrog)
+    obrazenia = random.randint(1,5) * self.sila * moc.obrażenia
+    wrog.zdrowie -= obrazenia
+    print(f"{self.imie} atakuje {wrog.imie} z mocą {moc.nazwa} za {obrazenia}")
+    print(f"{wrog.imie} ma {wrog.zdrowie} HP")
+
+class moc():
+  def __init__(self, nazwa, obrażenia, typ, koszt):
+    self.obrażenia = obrażenia
+    self.typ = typ
+    self.koszt = koszt
+    self.nazwa = nazwa
+    
+class gra():
+  def __init__(self, gracz, wrogowie):
+    self.gracz = gracz
+    self.wrogowie = wrogowie
+
+  def menu(self):
+    print("____________MENU____________")
+    print("1. zawalcz na arenie")
+    print("____________________________")
+    print("2. idź do sklepu")
+    print("____________________________")
+    print("3. poddaj się wojownikowi")
+    print("____________________________")
+    wybor = input(">>>")
+    if wybor == 1:
+      self.wybierzprzeciwnika()
+    elif wybor == 2:
+      pass
+    elif wybor == 3:
+      pass
+    else:
+      pass
+  def wybierzprzeciwnika(self):
+    for i in range(len(self.wrogowie)):
+      print(f"{i}.gladiator: ", self.wrogowie[i].imie)
+    print("____________WYBIERZ PECIWNIKA____________")
+    wybor = input(">>>")
+    return self.wrogowie[wybor]
+
+def walka(self, przeciwnik):
+  print("WALKA SIĘ ZACZELA")
+  print("______________________________________")
+  while self.bohater.zdrowie
+
+
+
+
