@@ -100,6 +100,14 @@ class Gra():
 bohater = Zolnierz(
     [Moc("Czar", 20, "Magia", 20),
      Moc("Walnięcie laską", 15, "Fizyczne", 25)], 250, 5, 75, 1, "Gandalf")
+SmurfCat = Zolnierz([Moc("Kluczyk do chatki", 10, "Magia", 10),
+                       Moc("Skok na głowę", 15, "Fizyczne", 15)
+                   ],
+                   zdrowie=150,
+                   sila=8,
+                   wytrzymalosc=60,
+                   poziom=1,
+                   imie="Smurfcat")
 Dundersztyc = Zolnierz(
     [Moc("Atakoinator", 10, "Nauka", 5),
      Moc("Rolady Dwie", 20, "Magia", 20)],
@@ -118,7 +126,7 @@ Bambaryła = Zolnierz([
                      3,
                      imie="Bambaryła")
 
-gra = Gra(bohater, [Dundersztyc, Bambaryła])
+gra = Gra(bohater, [Dundersztyc, Bambaryła, SmurfCat])
 
 while True:
   gra.menu()
