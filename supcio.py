@@ -54,7 +54,7 @@ class SklepInternetowy:
       if self.zalogowany_uzytkownik is not None:
           print(f"Płatność za zakupy w kwocie {kwota} PLN dokonana z konta {numer_karty}. Dziękujemy!")
       else:
-          print("Aby dokonać płatności, musisz być zalogowany.")
+          print("płatność udana.")
 
   def zakoncz_zakupy(self):
     # Wyświetlamy zawartość koszyka
@@ -142,6 +142,24 @@ sklep.dodaj_produkt(51, 'Asus ROG Zephyrus Duo', 5799, 'Asus')
 sklep.dodaj_produkt(52, 'Asus TUF Gaming FX505', 2199, 'Asus')
 sklep.dodaj_produkt(53, 'Asus Chromebook Flip', 1299, 'Asus')
 
+sklep.dodaj_produkt(54, 'Alcatel 1', 399, 'Alcatel')
+sklep.dodaj_produkt(55, 'Alcatel 3X', 599, 'Alcatel')
+sklep.dodaj_produkt(56, 'Alcatel 1S', 499, 'Alcatel')
+sklep.dodaj_produkt(57, 'Alcatel 3L', 349, 'Alcatel')
+sklep.dodaj_produkt(58, 'Alcatel 5', 899, 'Alcatel')
+sklep.dodaj_produkt(59, 'Alcatel 1X', 299, 'Alcatel')
+sklep.dodaj_produkt(60, 'Alcatel 3', 449, 'Alcatel')
+sklep.dodaj_produkt(61, 'Alcatel 1B', 199, 'Alcatel')
+sklep.dodaj_produkt(62, 'Alcatel 1V', 299, 'Alcatel')
+sklep.dodaj_produkt(63, 'Alcatel 1T 10', 499, 'Alcatel')
+sklep.dodaj_produkt(64, 'Alcatel 1T 7', 299, 'Alcatel')
+sklep.dodaj_produkt(65, 'Alcatel 3T 10', 899, 'Alcatel')
+sklep.dodaj_produkt(66, 'Alcatel 1T 7 (2020)', 249, 'Alcatel')
+sklep.dodaj_produkt(67, 'Alcatel 1T 10 (2020)', 399, 'Alcatel')
+sklep.dodaj_produkt(68, 'Alcatel 3T 8', 599, 'Alcatel')
+
+
+
 
 # Rejestracja lub logowanie
 akcja = int(input("Wybierz akcję (1 - logowanie, 2 - rejestracja): "))
@@ -172,4 +190,5 @@ while True:
 
 # Zakończenie zakupów (wyświetlenie koszyka, podsumowanie i płatność)
 sklep.zakoncz_zakupy()
+
 
