@@ -1,0 +1,25 @@
+from random import randint
+
+def toss_coin():
+    coin = randint(0, 1)
+
+
+def coin_simulator(coin):
+    if coin == 0:
+        print("reszka")
+    else:
+        print("orzeł")
+
+
+def play_game():
+    orzel_count = 0
+    reszka_count = 0
+    total_count = 0
+    while True:
+        print("nacisnij enter, zeby zuczic moneta lub wpisz  quit' aby zakonczyc gre")
+        user_input = input()
+        if user_input.lower() == "q":
+            print("zjeżdzaj pajacu!!!")
+            break
+            toss_coin()
+            coin_simulator
