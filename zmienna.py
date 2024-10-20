@@ -27,6 +27,16 @@ def funkcja():
 def funkcja():
     imie = "yelysei"
     nazwisko = "serbin"
+
+    imie = "anastazja"
+
+def funkcja():
+    imie = "yelysei"
+    print(imie)
+  
+
+print(imie) #zwróć mi "anastazja"
+funkcja() #zwrucić mi "yelsei"
     print(imie, nazwisko)
     return imie
 
