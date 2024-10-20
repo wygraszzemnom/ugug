@@ -42,3 +42,13 @@ funkcja() #zwrucić mi "yelsei"
 
 tylko_imie = funkcja()
 print(tylko_imie)
+
+PI = 3.14159
+
+def oblicz_obwod_kola(promien):
+    obwod = 2 * PI * promien
+    return obwod
+
+wynik = oblicz_obwod_kola(5)
+print(wynik)
+
